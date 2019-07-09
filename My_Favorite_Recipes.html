@@ -1,0 +1,272 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>My Favorite Recipes</title>
+       <link rel="stylesheet" href="my_fav.css">
+        <script type="text/javascript" src="javac.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.min.js"></script>
+       <style>
+        /* following two viewport lines are equivalent to meta viewport statement above, needed for Windows */
+        /* see https://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and https://drafts.csswg.org/css-device-adapt// */
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }  @viewport { width: 100vw ; min-zoom: 100%; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }           @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+    </style>
+
+    </head>
+    <body >
+       
+        <header>
+         <h1 id="My_Fav">My Favorite Recipes (የኢትዮጵያ)</h1>
+         
+         <nav>
+             <li><a href="#doro">Doro Wot (ዶሮ ወጥ)</a></li>
+             <li> <a href="#mahberawi">Mahberawi(ማህብራዊ)</a> </li>
+             <li><a href="#Injera">Injera(አንጅራ)</a></li>
+             <li> <a href="#Shiro">Ethiopian shiro(ሽሮ)</a> </li>
+             <li> <a href="#ethipian_tibs">Ethiopian Tibs(ጥብስ)</a> </li>
+             <li> <a href="#mexican_frittata">Mexican_frittata (ፍሪታታ)</a> </li>
+
+         </nav>
+        </header>
+        
+         <!--Eating Ball Game Integrated-->   
+      
+        <h1>Eating Ball Game</h1>
+        <audio src = "https://mainline.i3s.unice.fr/mooc/SkywardBound/assets/sounds/humbug.mp3" 
+        id="audioPlayer" >
+        </audio>
+        <button onclick="playBackgroundMusic();">BackgroundMusic</button>
+        <button onclick="stopBackgroundMusic();">StopMusic</button>
+        <button onclick="pauseBackgroundMusic();">Pause Music</button>
+        <div id="controls">
+                <label for="nbBalls">Number of balls: </label>
+                <input type="number" min=1 max=30 
+                       value=10 id="nbBalls"
+                       oninput="changeNbBalls(this.value);">
+                <p></p>
+               <label for="colorChooser">Player color: </label>
+                <input type="color" value='#FF0000'
+                       oninput="changePlayerColor(this.value);" id="colorChooser">
+                <p></p>
+                  <label for="selectColorOfBallToEat">Color of ball to eat: </label>
+                  <select onchange="changeColorToEat(this.value);" id="selectColorOfBallToEat">
+                    <option value='red'>red</option>
+                    <option value='blue'>blue</option>
+                    <option value='green'>green</option>
+                </select>
+                <p></p>
+            
+               <label for="ballSpeed">Change ball speed: </label>
+                - <input type="range" value='1'
+                         min=0.1 max=3 step=0.1
+                       oninput="changeBallSpeed(this.value);"
+                         id="ballSpeed"> + 
+                <p></p>
+                
+              </div>
+        <canvas id="myCanvas" width="400" height="200"></canvas>
+        <canvas id="myCanvas2" width="400" height="200"></canvas>
+    <article id="doro">
+        <h3>Ethiopian Doro Wot(Spicy chicken stew)</h3>
+        <img id="dorowet" src="image/ethiopian_doro_wot.jpg"  width=320 alt="Ethiopian Doro Wot" title="Ethiopian Doro Wot" >
+        <figure>
+           <figcaption>Doro Wot</figcaption>
+        </figure>
+        <h1 >List of Ingredients </h1>
+        <div>
+        <table>
+            <thead>
+             <th> Ingredient </th>
+             <th>Amount</th>
+            </thead> 
+            <tbody>         
+                    <tr> <td> chicken thighs</td><td>8-12 </td></tr>
+                    <tr> <td> T fresh lemon juice </td><td>1</td></tr>
+                    <tr><td>  salt</td><td>1 tsp</td></tr>
+                    <tr><td>onions, finely chopped </td><td>4 </td></tr>
+                    <tr><td> butter</td><td>1/2 C </td></tr>
+                    <tr><td> cloves garlic, minced </td><td>use</td></tr>
+                    <tr><td>  cinnamon</td><td>1 tsp.</td></tr>
+                    <tr><td> ginger</td><td>1 tsp </td></tr>
+                    <tr><td>  ground fenugreek</td><td>1/2 tsp</td></tr>
+                    <tr><td>  ground cardamom </td><td>1/2 tsp</td></tr>
+                    <tr><td>  ground nutmeg </td><td>1/2 tsp</td></tr>
+                    <tr><td> Berbere (1 Ctd will be very spicy)</td><td>1/2 - 1 C</td></tr>
+                    <tr><td>paprika</td><td>4 T </td></tr>
+                   <tr><td> dry red wine</td><td>1/2 C</td></tr> 
+                   <tr><td> water water</td><td>3 C.</td></tr>
+                   <tr><td> hard-boiled egg per person</td><td>1</td></tr>
+                   <tr><td>Freshly ground black pepper</td><td>1/2 tsp</td></tr>
+                </tbody>
+        </table>
+    </div>
+        <ul class="Ing">
+               
+           
+        </ul>
+        <h3>Preparation Steps:</h3>
+        <ul class="steps">
+            <li>Ingredient 1: lamp</li>
+            <li>Ingredient 2: spinach</li>
+            <li>Ingredient 3: other</li>
+        </ul>
+        <a href="#My_Fav">Go To List</a>
+    </article>
+     <article id="mahberawi">
+
+      <h1>Ethiopia Mahberawi</h1>
+        <img src="image/ethiopia_mahberawi.jpg" width=320 title="ethipian Mahberawi" alt="Ethiopian Mahberaw"><br>
+        <h1 >List of Ingredients </h1>
+        <div>
+                <table>
+                    <thead>
+                     <th> Ingredient </th>
+                     <th>Amount</th>
+                    </thead> 
+                    <tbody>         
+                            <tr> <td> meat stews, made of chicken, beef or lamb</td><td>1-2 </td></tr>
+                            <tr> <td>  lentil/legume dishes, such as Mesir Wat </td><td>1-2</td></tr>
+                            <tr><td>cooked vegetables, including yellow peas, mixed vegetable stews and collard greens</td><td> 1-2 </td></tr>                     
+                            <tr><td> raw vegetable dish, usually a simple lettuce or tomato based salad </td><td>1</td></tr>
+
+                            
+                        </tbody>
+                </table>
+            </div>
+        <ul class="Ing">      
+            <li></li>
+            
+        </ul>
+         
+        <h3>Final Preparation for mahberawi</h3>
+            <ol class="steps">
+                <li>Step 1</li>   
+                <li>Step 2</li>   
+                <li>Step 3</li>   
+                <li>Enjoy!</li>   
+         </ol>
+        </article>
+        <a href="#My_Fav">Go To List</a>
+        <article id="Injera">
+            <h3>Injera</h3>
+            <img src="image/injera.jpg" width=320 title="ethiopian injera" alt="ethioipian injera">
+               <h1 class="Ing">Ingredients</h1>
+               <div>
+                    <table>
+                        <thead>
+                         <th> Ingredient </th>
+                         <th>Amount</th>
+                        </thead> 
+                        <tbody>         
+                                <tr> <td>  all purpose flou</td><td>3 cups</td></tr>
+                                <tr> <td>  teff flour </td><td>1 cup</td></tr>
+                                <tr><td>  baking soda</td><td>2 tablespoons</td></tr>                     
+                                <tr><td>salt (optional) </td><td>1 teaspoon </td></tr>
+                                <tr><td> club soda </td><td>4 cups</td></tr>
+                                <tr><td> white or rice vinegar </td><td>1 cup</td></tr>
+                                <tr><td>Oil for pan</td><td>use</td></tr>
+    
+                                
+                            </tbody>
+                    </table>
+                </div>
+                  
+        <h3>Preparation steps :</h3>  
+        <ul class="steps">
+            <li>prepare a large bowl</li>
+            <li>salt mix both flours and baking soda together</li>
+            <li>Whisk in the club soda until smooth Then add the vinegar and whisk Heat a large skillet over medium heat.</li>
+            <li>Pour oil on a paper towel and wipe the skillet with the oiled paper towel.</li>
+            <li>Using a scoop, pour batter into the skillet creating a 6 inch circle. Carefully swirl the pan around to thin out the batter until it measures 8-9 inches across.</li>  
+            <li>Cook for 1 minute, then using a large spatula, flip the Injera over and cook another minute. Remove from the skillet and stack on a plate. Repeat with remaining batter. The Injera will seem slightly crisp in the pan, but will soften immediately when placed on the plate.</li>
+            <li>Once finished cooking the Injera. Cut the circles in half with a pizza cutter, roll into tubes and stack. Keep warm until ready to serve. Serve the Doro Wat, mehabrawi , shiro and Injera together, tearing piece of Injera and using it to pick up the Wat.</li>
+            <li></li>
+        </ul>  
+        <a href="#My_Fav">Go To List</a>
+    </article>
+    <article id="Shiro">
+
+            <h1>Ethiopia Shiro</h1>
+              <img src="image/ethiopian_shiro.jpg" width=320 title="ethipian Shiro" alt="Ethiopian Shiro"><br>
+              <h1 >List of Ingredients </h1>
+              <ul class="Ing">  
+                  <li>½ cup oil </li>
+                  <li>½ cup chickpea flour</li>
+                  <li>2 medium onions, pureed </li>
+                  <li>1 roma tomato, pureed</li>
+                  <li>4 cloves of garlic, chopped</li>
+                  <li>2 tablespoons niter kibbeh (Ethiopian spiced clarified butter)</li>
+                  <li>2 to 2 ½ cups of water</li>
+                  <li>3 tablespoons berbere spice</li>
+                  <li>1 teaspoon garlic powder</li>
+                  <li>¼ teaspoon sugar</li>
+                  <li>Salt, to taste</li>
+                  <li>1 jalepeno, chopped (optional)</li>
+
+              </ul>
+    <h3>Preparation Steps:</h3>
+     <ol class="steps">
+       <li>Bring a heavy bottom stockpot to medium heat. Add pureed onions to the dry pan, and saute until they become dry and start to take on color- about 4-5 minutes. Add the oil and berbere spice. Saute for 1-2 minutes until fragrant.</li>   
+       <li>Next add tomato and chopped garlic. Saute for 2-3 minutes more.</li>   
+       <li>Now start whisking in about half of the chickpea flour. Gradually start to add about 1 cup of water. Whisk in the remaining chickpea flour and an additional 1 cup of water. Whisk until mixture is very smooth. Add remaining ½ cup of water if you prefer your shiro a little thinner.</li>   
+       <li>Heat until the shiro begins to pop (simmer). Then add the niter kibbeh, garlic powder, sugar, and salt to taste, stirring until combined.</li>
+       <li>Simmer for about 5-10 minutes over low heat until the flavors combine and the oil separates slightly from the shiro.</li>
+       <li>Garnish with jalepeno, if desired.</li>   
+       <li>Serve with fresh injera.</li>
+     </ol>
+     Thanks to: Yummly Rich Recipes
+     <a href="#My_Fav">Go To List</a>
+          </article>
+        </article>
+        <article id="ethipian_tibs">
+    
+                <h1>Ethiopia Tibs</h1>
+                  <img src="image/ethipian_tibs.jpg" width=320 title="ethipian ethipian_tibs" alt="Ethiopian Tibs"><br>
+                  <h1 >List of Ingredients </h1>
+                  <ul class="Ing">
+                      <li>Ingredient 1: Siga </li>
+                      <li>Ingredient 2: </li>
+                      <li>Ingredient 3: /li>
+                  </ul>
+        <h3>Preparation Steps:</h3>
+             <ol class="steps">
+                <li>Step 1</li>   
+                <li>Step 2</li>   
+                <li>Step 3</li>   
+                <li>Enjoy!</li>   
+            </ol>
+        </article>
+    </article>
+    <a href="#My_Fav">Go To List</a>
+    <article id="mexican_frittata">
+
+            <h1>Ethiopia Shiro</h1>
+              <img src="image/mexican_frittata.jpg" width=320 title="mexican_frittata alt="mexican_frittata"><br>
+              <h1 >List of Ingredients </h1>
+              <ul class="Ing"> 
+                  <li> 1/2 cup tomato (diced)</li>
+                  <li>1/4 cup red onion (peeled, finely diced)</li>
+                  <li>2 tablespoons fresh cilantro leaves (chopped, plus additional to garnish)</li>
+                  <li> 1/4 teaspoon cumin.</li>
+                  <li>1/2 jalapeno (finely diced)</li>
+                  <li>5 large eggs.</li>
+                  <li>1/4 teaspoon ground turmeric.</li>
+                  <li> 1/2 cup mild or sharp cheddar, monterey Jack or mozzarella cheese (grated)</li>
+
+              </ul>
+             <h3>Preparation Steps:</h3>
+                <ol>
+                <li>Step 1</li>   
+                <li>Step 2</li>   
+                <li>Step 3</li>   
+                <li>Enjoy!</li>   
+                </ol>
+          </article>
+          <a href="#My_Fav">Go To List</a>
+    </body>
+    <footer>
+        <h3>Contact me</h3>
+        <a href="mailto:asfeta@yahoo.com">email</a>
+    </footer>
+</html>

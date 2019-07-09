@@ -1,0 +1,153 @@
+html,body
+{
+    margin-left: 2%;
+    margin-right:2%;
+    font-family:"Georgia","monospace";
+    margin-top: 0%;
+    background-color:lemonchiffon;
+    
+}
+header{
+    text-align: center;
+    border-style: double;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px black;
+    background-color:lightgreen;
+    /*left:0;
+    
+    right: 0;*/
+    top: 0;
+    /*position: fixed;*/
+    max-width:  100%;
+    opacity: 1.0;
+    padding: 10px;
+
+    
+    
+}
+#myCanvas
+{
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 10px;
+  position:center;
+}
+#controls
+{
+  float: left;
+}
+article img
+ { 
+     /*First, we'll add some space between the names and pictures of each bird.  For that we'll want to use a margin, particularly on the left:*/
+     width: 300px;
+     margin-left: 1rem;
+     margin-top: 3rem;
+     margin-bottom: -1rem;
+     border: 5px solid navy;
+     padding: 5px;
+     border-radius: 25px;
+     max-width: 75%;
+     
+     
+}
+header li:hover  {
+   background-color: lightblue; 
+   font-style: italic;
+  }
+li:active { background-color: red;  }
+li { cursor: pointer; }
+
+
+header nav 
+{   
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    box-sizing: border-box;
+    /*background-color: lightgreen;*/
+    font-style: normal;
+    text-decoration: underline;
+    min-width: 100vw;
+    justify-content: left;
+    font-size: 20px;
+    text-decoration-style: dashed;
+    line-height: 1.5;
+    padding: 10px;
+    animation: warning  1.5s infinite ease-in;
+    
+    
+}
+
+
+header nav  li {
+ display: inline-block;
+  margin: 0px;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+
+article
+{
+    margin-left: 40px;
+    min-width: 30rem;
+    max-width: 50rem;
+    margin: auto;
+}
+.steps
+{
+    list-style-type: decimal-leading-zero;
+    color: brown;
+}
+.Ing
+{
+   list-style-type: circle;
+}
+
+
+/* Activity table 3*/
+div  table ,td,th
+{
+  border:1px solid white;
+}
+div td,th
+{
+  border-bottom:1px;
+  padding:10px;
+}
+div table
+{
+  border-collapse:collapse;
+  width:100%;
+}
+div tr:nth-child(even)
+{
+  background-color:#dcfcf2;
+}
+div tr:nth-child(odd)
+{
+  background-color:lightblue;
+}
+div tr:hover
+{
+  background-color:yellow;
+  
+}
+div thead th
+{
+  background-color:#33c1ff;
+}
+div
+{
+  height:200px;
+  border:3px solid black;
+  overflow:scroll;
+  width: 50%;
+  background-color: r
+}
+div th
+{
+    text-align: center;
+}
+
